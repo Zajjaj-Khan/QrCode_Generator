@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <!-- Qrcode generated cdn link -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+  integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+  <style>
+    #spinner{
+      display: none;
+    }
+    .error{
+      background-color: red;
+      color:#fff !important ;
+      font-weight: bold;
+      padding: 7px;
+      margin: 10px;
+      
+    }
+  </style>
+  
+</head>
+<body>
+ <header class=" gird bg-yellow-300 mb-10 p-4 font-extrabold text-2xl"> Generator Your QR Code
+  <img src="../images/generateQr.jpg" alt="icon"
+  class="inline w-6 h-6">
+ </header>
+  <main class="font-sans">
+    <div class="flex flex-col-reverse align-center justify-center m-auto md:max-w-4xl 
+    md:flex-row m-20 mb-10 ">
+    <div class="w-full md:w-2/3  shadow-xl p-4 rounded-md border-slate-500 ring-1 
+    ring-slate-200 mr-3 ">
+      <h1 class="font-bold font-serif text-2xl mb-4 ">Generator Your Own Custom Qr Codes</h1>
+      <p class="mb-4"> This site lets you generate your own custom Qr-code 
+        for any website or product.</p><br/>
+        <p>Enter your Url below</p>
+        <div>
+
+          <div id="warning"></div>
+
+        </div>
+       
+      <form id="generate-form">
+        <input id="url" type="url"
+        placeholder="Enter your Url"
+         class="w-full border-grey-200 border-2  rounded focus:outline-none 
+         mr-2 mb-5 p-4 text-grey-dark">
+         <select id="size" class="w-full border-grey-200 border-2  rounded-2 focus:outline-none 
+         mr-2 mb-5 p-4 text-grey-dark">
+         <option value="100">100x100</option>
+         <option value="200" selected>200x200</option>
+         <option value="300">300x300</option>
+         <option value="400">400x400</option>
+         <option value="500">500x500</option>
+         <option value="600">600x600</option>
+         </select>
+         <button type="submit" class="w-full bg-gradient-to-r from-orange-400 to-yellow-200 rounded-md p-3 font-bold hover:from-orange-600 hover:to-orange-600">Generator QR Code</button>
+      </form>
+
+    </div>
+    <div class="w-full md:w-1/3 slef-center mt-10">
+      <img src="../images/download.png"
+       alt="Display_Picture"
+       class="w-2/3 full md:w-full m-auto mb-10 mt-10">
+    </div>
+    </div>
+   <!-- Generated Qr code  -->
+    <div id="generated"
+    class="max-w-5xl m-auto flex flex-col text-center align-center justify-centermt-20">
+      <!-- spinner -->
+      <div id="spinner">
+        <img src="../images/icons8-spinner.gif" alt="laoding..."
+        class="inline mr-4 w-24 h-24text-grey-200">
+      </div>
+    <!-- Qr code  -->
+    <div id="qrcode" class="m-auto mb-[3rem]"></div>
+    </div>
+
+    
+  
+  
+  </main>
+
+ </header>
+  <script src="script.js"></script>
+</body>
+</html>
