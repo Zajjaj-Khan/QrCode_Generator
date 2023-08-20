@@ -14,7 +14,7 @@ It is a web-application that helps you to generate your own custom Qr-code of th
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Zajjaj-Khan/QrCode_Generator/blob/master/images/Screenshot.png)
 
 
 ## CDN Script TO QRcodeJS
